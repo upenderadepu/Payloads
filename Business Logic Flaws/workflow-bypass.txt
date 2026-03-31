@@ -1,0 +1,15 @@
+step=3
+step=99
+step=0
+step=-1
+state=complete
+state=confirmed
+state=paid
+state=shipped
+stage=final
+current_step=last
+skip=true
+bypass=true
+verified=1
+email_verified=1
+otp_verified=1

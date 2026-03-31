@@ -1,0 +1,36 @@
+GET /api/users/2 HTTP/1.1
+GET /api/users/1 HTTP/1.1
+GET /api/users/0 HTTP/1.1
+GET /api/users/admin HTTP/1.1
+GET /api/users/-1 HTTP/1.1
+GET /api/users/99999 HTTP/1.1
+GET /v1/users/1 HTTP/1.1
+GET /v2/users/1 HTTP/1.1
+GET /v3/users/1 HTTP/1.1
+GET /api/v1/users/1 HTTP/1.1
+GET /api/v2/users/1 HTTP/1.1
+GET /api-v1/users/1 HTTP/1.1
+GET /api_v1/users/1 HTTP/1.1
+GET /api/users/1.json HTTP/1.1
+GET /api/users/1.xml HTTP/1.1
+GET /api/users/1%00.json HTTP/1.1
+GET /api/users/1%23 HTTP/1.1
+GET /api/Users/1 HTTP/1.1
+GET /API/USERS/1 HTTP/1.1
+GET /api/users/1/ HTTP/1.1
+GET /api/users/1? HTTP/1.1
+GET /api/users/1; HTTP/1.1
+GET /api/internal/users HTTP/1.1
+GET /api/admin/users HTTP/1.1
+GET /api/debug/users HTTP/1.1
+GET /api/test/users HTTP/1.1
+PUT /api/users/1 HTTP/1.1
+DELETE /api/users/1 HTTP/1.1
+PATCH /api/users/1 HTTP/1.1
+POST /api/users HTTP/1.1
+GET /api/users/1 HTTP/1.1
+X-HTTP-Method-Override: PUT
+GET /api/users/1 HTTP/1.1
+X-Method-Override: DELETE
+POST /api/users/1 HTTP/1.1
+X-HTTP-Method: PUT

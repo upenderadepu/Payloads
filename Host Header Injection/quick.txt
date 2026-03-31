@@ -1,0 +1,7 @@
+Host: attacker.com
+X-Forwarded-Host: attacker.com
+X-Host: attacker.com
+X-Forwarded-Server: attacker.com
+X-Forwarded-For: 127.0.0.1
+X-Original-URL: /admin
+X-Real-IP: 127.0.0.1

